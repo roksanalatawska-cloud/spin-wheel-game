@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Wheel - Yes/No/Maybe Oracle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Magic Wheel ✨</h1>
+            <p class="subtitle">Ask a question and spin the wheel for your answer</p>
+        </header>
+
+        <div class="question-section">
+            <input 
+                type="text" 
+                id="questionInput" 
+                placeholder="Ask your question..." 
+                maxlength="100"
+            >
+            <button id="spinBtn" class="spin-button">SPIN THE WHEEL</button>
+        </div>
+
+        <div class="wheel-container">
+            <canvas id="wheelCanvas"></canvas>
+            <div class="center-circle"></div>
+            <div class="pointer"></div>
+        </div>
+
+        <div class="result-section" id="resultSection" style="display: none;">
+            <div class="result-card">
+                <h2 id="resultText"></h2>
+                <p id="questionDisplay"></p>
+                <p id="adviceText"></p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Recent Spins</h3>
+            <ul id="historyList" class="history-list"></ul>
+            <button id="clearHistoryBtn" class="clear-btn">Clear History</button>
+        </div>
+
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
